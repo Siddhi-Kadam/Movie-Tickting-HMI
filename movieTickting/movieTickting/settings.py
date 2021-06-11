@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'employee',
+    'viewer',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +77,11 @@ WSGI_APPLICATION = 'movieTickting.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hmi-pro',
+        'USER': 'postgres',
+        'PASSWORD': 'siddhi',
+        'HOST': 'localhost'
     }
 }
 
@@ -125,3 +130,11 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'siddhi3199@gmail.com'
+EMAIL_HOST_PASSWORD = '@bcd1234/'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

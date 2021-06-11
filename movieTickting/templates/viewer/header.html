@@ -5,7 +5,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
 				<h1><a class="navbar-brand" href="/"><span
-							aria-hidden="true"><img src="https://www.freepnglogos.com/uploads/youtube-play-button-png/youtube-play-button-png-download-best-youtube-play-button-png-clipartmagm-24.png" height="40" width="35"></span>
+							aria-hidden="true"><img src="{% static 'img.png' %}" height="60" width="55"></span>
 						Moviezz </a></h1>
 				<!-- if logo is image enable this
 						<a class="navbar-brand" href="#index.html">
@@ -22,63 +22,15 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="/">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="about">About</a>
 						</li>
-				<li class="nav-item">
-								<a class="nav-link" href="genre.html">Genre</a>
-							</li>
-
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="contact">Contact</a>
 						</li>
 					</ul>
-
-					<!--/search-right-->
-					<!--/search-right-->
-					<div class="search-right">
-						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span
-								class="fa fa-search ml-3" aria-hidden="true"></span></a>
-						<!-- search popup -->
-						<div id="search" class="pop-overlay">
-							<div class="popup">
-								<form action="#" method="post" class="search-box">
-									<input type="search" placeholder="Search your Keyword" name="search"
-										required="required" autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
-											aria-hidden="true"></span></button>
-								</form>
-								<div class="browse-items">
-									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-									<ul class="search-items">
-										<li><a href="genre.html">Action</a></li>
-										<li><a href="genre.html">Drama</a></li>
-										<li><a href="genre.html">Family</a></li>
-										<li><a href="genre.html">Thriller</a></li>
-										<li><a href="genre.html">Commedy</a></li>
-										<li><a href="genre.html">Romantic</a></li>
-										<li><a href="genre.html">Tv-Series</a></li>
-										<li><a href="genre.html">Horror</a></li>
-										<li><a href="genre.html">Action</a></li>
-										<li><a href="genre.html">Drama</a></li>
-										<li><a href="genre.html">Family</a></li>
-										<li><a href="genre.html">Thriller</a></li>
-										<li><a href="genre.html">Commedy</a></li>
-										<li><a href="genre.html">Romantic</a></li>
-										<li><a href="genre.html">Tv-Series</a></li>
-										<li><a href="genre.html">Horror</a></li>
-									</ul>
-								</div>
-							</div>
-							<a class="close" href="#close">×</a>
-						</div>
-						<!-- /search popup -->
-						<!--/search-right-->
-					</div>
-
-
 				</div>
 				<!-- toggle switch for light and dark theme -->
 				<div class="mobile-position">
@@ -91,6 +43,13 @@
 									<i class="gg-moon"></i>
 								</div>
 							</label>
+						</div>
+					</nav>
+				</div>
+				<div class="mobile-position">
+					<nav class="navigation">
+						<div class="theme-switch-wrapper">
+							<a href="employee"><img src="{% static 'img_1.png' %}" height="40" width="30"></i></a>
 						</div>
 					</nav>
 				</div>

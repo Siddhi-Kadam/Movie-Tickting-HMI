@@ -8,159 +8,38 @@
 						<div class="headerhny-left">
 							<h3 class="hny-title">New Releases</h3>
 						</div>
-						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="genre.html">Show all</a></h4>
-						</div>
 					</div>
 				</div>
 				<div class="owl-three owl-carousel owl-theme">
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n1.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
+					{% for i in newRelease %}
+						<div class="item vhny-grid">
+							<div class="box16 mb-0">
+								<a href="{{ i.trailer }}">
+									<figure>
+										<img class="img-fluid" src="media/{{ i.image }}" alt="">
+									</figure>
+									<div class="box-content">
+										<h4>
+											<span class="post"><span class="fa fa-clock-o"> </span> {{ i.hour }} Hr {{ i.minute }} min</span>
+											<span class="post"><span class="fa fa-rupee text-right"></span> {{ i.price }}</span>
+										</h4>
+										<h4>
+											<span class="post"><span class="fa fa-calendar-o"> </span> Today</span>
+											<span class="post"><span class="fa fa-clock text-right"></span> 5 P.M.</span>
+										</h4>
+									</div>
+									<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								</a>
+							</div>
+							<h3> <a class="title-gd" href="book/{{i.id}}">{{ i.movieName }}</a></h3>
+							<p>{{ i.description }}</p>
+							<p><a href="{{ i.rating }}">About Movie</a></p>
+							<div class="button-center text-center mt-4">
+								<a href="book/{{i.id}}" class="btn watch-button">Book now</a>
+							</div>
 						</div>
-						<h3> <a class="title-gd" href="genre.html">No Time to Die</a></h3>
-						<p>Heyy</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n2.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Mulan</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n3.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Free Guy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n4.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">My Spy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n5.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Scoob</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="{% static 'viewer/assets/images/n6.jpg' %}" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Downhill</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
-
 		</div>
 </section>
